@@ -1,0 +1,22 @@
+{
+  "name": "express-admin-auth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.19.2",
+    "http-errors": "~1.6.3",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.1",
+    "morgan": "~1.9.1",
+    "nodemon": "^3.1.4",
+    "pug": "2.0.0-beta11"
+  }
+}
