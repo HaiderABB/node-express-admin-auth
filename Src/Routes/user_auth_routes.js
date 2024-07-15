@@ -1,6 +1,7 @@
 const express = require('express');
 const AuthRouter = express.Router();
 const UserAuthentication = require('../Controllers/Auth/UserAuthentication')
+const RegisterUser = require('../Controllers/Registration/RegisterUser')
 
 // Validate/Authenticate User 
 AuthRouter.get('/Authentication', UserAuthentication);
