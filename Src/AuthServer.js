@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 
 const connection = MongoConnection();
 
+// MongoDB connection check
 if (connection) {
 
   const user_auth = express();
