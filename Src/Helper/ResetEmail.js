@@ -21,4 +21,4 @@ const sendMail = async (transporter, mailOptions) => {
 
 sendMail(transporter, mailOptions)
 
-module.exports = ResetEmail;
+// module.exports = ResetEmail;
