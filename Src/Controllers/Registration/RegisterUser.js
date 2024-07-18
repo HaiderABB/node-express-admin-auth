@@ -1,21 +1,27 @@
 
 const EncryptPassword = require('../../Helper/EncryptPassword')
-
+const StoreUserData = require('../../Model/DB/StoreUserData')
 // Main Controller Function
 const RegisterUser = async (req, res) => {
 
-  console.log(req.body)
 
   const payload = req.body;
 
-  const userRegistrationParams = {
-    name: payload.Name,
-    email: payload.Email,
-    password: EncryptPassword(payload.Password),
+  const pass = await EncryptPassword(payload.password);
+
+  const UserRegistrationParams = {
+    name: payload.name,
+    email: payload.email,
+    password: pass,
   }
 
-
-  res.json({ message: 'Achieved' })
+  try {
+    await StoreUserData(UserRegistrationParams);
+  } catch (err) {
+    console.log(err);
+  } finally {
+    res.json({ message: 'User Stored in DB' })
+  }
 
 }
 
