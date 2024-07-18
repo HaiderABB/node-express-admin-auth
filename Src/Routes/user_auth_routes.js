@@ -2,7 +2,7 @@ const express = require('express');
 const AuthRouter = express.Router();
 const UserAuthentication = require('../Controllers/Auth/UserAuthentication')
 const RegisterUser = require('../Controllers/Registration/RegisterUser')
-const UpdateUserPassword = require('../Controllers/Update/UpdateUserPassword');
+const ValidateEmail = require('../Controllers/Validation/ValidateEmail');
 
 // Validate/Authenticate User 
 AuthRouter.get('/Authentication', UserAuthentication);
@@ -11,6 +11,6 @@ AuthRouter.get('/Authentication', UserAuthentication);
 AuthRouter.post('/Registration', RegisterUser);
 
 // Reset User Password 
-AuthRouter.put('/Reset', UpdateUserPassword);
+AuthRouter.put('/Forgot', ValidateEmail);
 
 module.exports = AuthRouter;
