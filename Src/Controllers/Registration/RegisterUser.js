@@ -7,11 +7,11 @@ const RegisterUser = async (req, res) => {
 
   const payload = req.body;
 
-  const pass = await EncryptPassword(payload.Password);
+  const pass = await EncryptPassword(payload.password);
 
   const UserRegistrationParams = {
-    name: payload.Name,
-    email: payload.Email,
+    name: payload.name,
+    email: payload.email,
     password: pass,
   }
 
@@ -22,7 +22,6 @@ const RegisterUser = async (req, res) => {
   } finally {
     res.json({ message: 'User Stored in DB' })
   }
-
 
 }
 
