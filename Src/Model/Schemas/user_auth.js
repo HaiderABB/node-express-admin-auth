@@ -10,5 +10,6 @@ const auth_schema = {
 }
 
 const user_auth_schema = new Schema(auth_schema);
+const User_Auth_Schema = mongoose.model('auths', user_auth_schema);
 
-module.exports = user_auth_schema;
+module.exports = User_Auth_Schema;
