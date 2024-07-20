@@ -8,15 +8,12 @@ const RegisterUser = async (req, res) => {
   const payload = req.body;
 
   const pass = await EncryptPassword(payload.password);
-
-  const UserRegistrationParams = {
-    name: payload.name,
-    email: payload.email,
-    password: pass,
-  }
-
   try {
-    await StoreUserData(UserRegistrationParams);
+    await StoreUserData({
+      name: payload.name,
+      email: payload.email,
+      password: pass,
+    });
   } catch (err) {
     console.log(err);
   } finally {
