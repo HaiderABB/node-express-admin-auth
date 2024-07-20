@@ -4,14 +4,7 @@ const transporter = require('../Config/Transporter');
 const ejs = require('ejs');
 const ResetEmailTemplate = require('../Templates/ResetEmailTemplate')
 
-const sendMail = async (transporter, email) => {
-
-  // const emailData = {
-  //   name: 'Haider'
-  // }
-
-  // const emailTemplate = await ejs.renderFile(__dirname + '/../Templates/ResetEmailTemplate.ejs', emailData)
-  const name = 'Haider';
+const sendMail = async (transporter, email, name) => {
   const emailTemplate = ResetEmailTemplate(name)
 
   mailOptions = {
@@ -27,6 +20,8 @@ const sendMail = async (transporter, email) => {
   } catch (err) { console.log(err); }
 }
 
-sendMail(transporter, 'haider.a.moazzam@gmail.com')
+const ResetEmail = (email, name) => {
+  sendMail(transporter, email, name)
+}
 
-// module.exports = ResetEmail;
+module.exports = ResetEmail;

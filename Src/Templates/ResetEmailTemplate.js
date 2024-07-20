@@ -16,7 +16,7 @@ const ResetEmailTemplate = (name) => `<table style="max-width: 660px ; border-co
       </tr>
       <tr style="background-color: #ffffff">
         <td style="padding: 0% 3%; font-size: 16px;color: #000000; font-family: Helvetica Neue, Helvetica, Arial, Verdana, sans-serif;font-weight: normal;line-height: 1.5;letter-spacing: 0px;padding-bottom: 5% ">
-          <p style=" text-align:left"> ${name},</p>
+          <p style=" text-align:left"> Dear ${name},</p>
           <p style="text-align: left">You have requested to reset your password. To complete the process, please click on the following link:
             <a target='_blank' href="http://localhost:3000/ResetPassword" rel="noopener">
               <span style="color: #fa8b02; text-decoration: underline">Reset Password</span>
