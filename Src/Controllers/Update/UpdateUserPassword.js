@@ -1,0 +1,17 @@
+const EncryptPassword = require('../../Helper/EncryptPassword');
+const UpdatePassword = require('../../Model/DB/UpdatePassword');
+
+const UpdateUserPassword = async (req, res) => {
+  const { email, password } = req.body;
+  const hashedPass = await EncryptPassword(password);
+  console.log(hashedPass)
+  try {
+    await UpdatePassword(email, hashedPass);
+  } catch (err) {
+    console.log(err); res.status(400).json({ message: "Couldn't Update Password" });
+  } finally {
+    res.status(200).json({ message: "Password Updated Successfully" })
+  }
+}
+
+module.exports = UpdateUserPassword;

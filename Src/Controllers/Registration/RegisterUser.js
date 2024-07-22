@@ -1,7 +1,7 @@
 const EncryptPassword = require('../../Helper/EncryptPassword');
 const StoreUserData = require('../../Model/DB/StoreUserData');
 const WelcomeEmail = require('../../Helper/WelcomeEmail');
-const ValidateEmail = require('../../Controllers/Validation/ValidateEmail');
+const ValidateEmail = require('../../Middlewares/Validation/ValidateEmail');
 
 const RegisterUser = async (req, res) => {
   const { name, email, password } = req.body;
