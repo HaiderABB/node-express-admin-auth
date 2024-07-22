@@ -1,5 +1,5 @@
 
-const ValidateEmail = require('../Validation/ValidateEmail');
+const ValidateEmail = require('../../Middlewares/Validation/ValidateEmail');
 const ResetEmail = require('../../Helper/ResetEmail')
 
 async function ForgotPassword(req, res) {
@@ -18,7 +18,7 @@ async function ForgotPassword(req, res) {
       console.log(err);
     }
     finally {
-      return res.status(400).json({ message: "User Exists", mail: true })
+      return res.status(200).json({ message: "User Exists", mail: true })
     }
   }
 }

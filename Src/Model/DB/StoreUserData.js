@@ -8,8 +8,6 @@ async function StoreUserData(data) {
     await user.save();
   } catch (err) {
     console.log(err);
-  } finally {
-    console.log('The user is stored')
   }
 
 }
