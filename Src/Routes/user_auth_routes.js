@@ -10,13 +10,13 @@ const UpdateUserPassword = require('../Controllers/Update/UpdateUserPassword')
 AuthRouter.get('/Authentication', UserAuthentication);
 
 // SignUp/Register New User
-// AuthRouter.post('/Registration', RegisterUser);
+AuthRouter.post('/Registration', RegisterUser);
 
 // Apply for Update User Password 
 AuthRouter.post('/Forgot', ForgotPassword);
 
 // Update User Password
-AuthRouter.post('/Update', UpdateUserPassword)
+AuthRouter.put('/Forgot/Update', UpdateUserPassword)
 
 
 
