@@ -21,7 +21,7 @@ const WelcomeEmailTemplate = (name) => `<table style="max-width: 660px ; border-
           </p>
           <p style="text-align: left"><strong>Exclusive Offers and Tips</strong> As a valued member of our community, you'll receive exclusive travel tips, discounts, and promotions to make your travels even more enjoyable. Keep an eye on your inbox for our regular newsletters, packed with inspiration and advice to help you explore the world.
           </p>
-           <p style="text-align: left"><strong>We're Here to Help</strong> f you have any questions or need assistance, our friendly support team is just a click away. Reach out to us at  <a href="mailto: travel.travisor@gmail.com" style=" color: #FA8B02;text-decoration:underline ">support@TraVisor.org</a>, and we'll be happy to help.
+           <p style="text-align: left"><strong>We're Here to Help</strong> If you have any questions or need assistance, our friendly support team is just a click away. Reach out to us at  <a href="mailto: travel.travisor@gmail.com" style=" color: #FA8B02;text-decoration:underline ">support@TraVisor.org</a>, and we'll be happy to help.
           </p>
           <p style= "text-align: left; color: #fa8b02;font-size: 18px">
             <strong>Best Regards, The TraVisor Team</strong>
