@@ -1,10 +1,9 @@
-const EncryptPassword = require('../../Helper/EncryptPassword');
+const EncryptPassword = require('../../Middlewares/Encryption/EncryptPassword');
 const UpdatePassword = require('../../Model/DB/UpdatePassword');
 
 const UpdateUserPassword = async (req, res) => {
   const { email, password } = req.body;
   const hashedPass = await EncryptPassword(password);
-  console.log(hashedPass)
   try {
     await UpdatePassword(email, hashedPass);
   } catch (err) {

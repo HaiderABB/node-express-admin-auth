@@ -1,4 +1,4 @@
-const EncryptPassword = require('../../Helper/EncryptPassword');
+const EncryptPassword = require('../../Middlewares/Encryption/EncryptPassword');
 const StoreUserData = require('../../Model/DB/StoreUserData');
 const WelcomeEmail = require('../../Helper/WelcomeEmail');
 const ValidateEmail = require('../../Middlewares/Validation/ValidateEmail');
