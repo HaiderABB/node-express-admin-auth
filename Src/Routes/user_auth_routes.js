@@ -7,7 +7,7 @@ const ForgotPassword = require('../Controllers/Update/ForgotUserPassword')
 const UpdateUserPassword = require('../Controllers/Update/UpdateUserPassword')
 
 // Validate/Authenticate User 
-AuthRouter.get('/Authentication', UserAuthentication);
+AuthRouter.post('/Authentication', UserAuthentication);
 
 // SignUp/Register New User
 AuthRouter.post('/Registration', RegisterUser);
