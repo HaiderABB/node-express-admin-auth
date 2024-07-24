@@ -7,8 +7,17 @@ const connection = MongoConnection();
 
 if (connection) {
 
+  const cors = require("cors");
+  const corsOptions = {
+    origin: '*',
+    credentials: true,            //access-control-allow-credentials:true
+    optionSuccessStatus: 200,
+  }
+
+
   const user_auth = express();
 
+  user_auth.use(cors(corsOptions))
   user_auth.use(express.json());
   user_auth.use(express.urlencoded({ extended: false }));
 
