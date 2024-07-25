@@ -16,16 +16,16 @@ const RegisterUser = async (req, res) => {
     const emailValidation = await ValidateEmail(email);
 
     if (emailValidation.user.length > 0) {
-      return res.status(400).json({ message: 'User Already exists' });
+      return res.json({ message: 'User Already exists', email: 'Failed', user: false });
     }
 
     await StoreUserData({ name, email, password: encryptedPassword });
     await WelcomeEmail(email, name);
 
-    res.status(201).json({ message: 'User registered Successfully', email: 'Successful' });
+    res.status(200).json({ message: 'User registered Successfully', email: 'Successful', user: true });
   } catch (err) {
     console.log(err);
-    res.status(400).json({ message: "Couldn't register User", email: 'Failed' });
+    res.json({ message: "Couldn't register User", email: 'Failed', user: false });
   }
 
 };
