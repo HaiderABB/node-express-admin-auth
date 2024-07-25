@@ -15,12 +15,12 @@ async function UserAuthentication(req, res) {
       res.status(200).json({ message: 'Login Successful', Email: true, Password: true });
     }
     else {
-      res.status(400).json({ message: "Password Invalid", Email: true, Password: false });
+      res.json({ message: "Password Invalid", Email: true, Password: false });
     }
 
   }
   else if (!emailValidation.value.length) {
-    res.status(400).json({ message: "Email Invalid", Email: false, Password: false });
+    res.json({ message: "Email Invalid", Email: false, Password: false });
   }
 
 
