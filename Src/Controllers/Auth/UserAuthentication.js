@@ -22,7 +22,5 @@ async function UserAuthentication(req, res) {
   else if (!emailValidation.value.length) {
     res.json({ message: "Email Invalid", Email: false, Password: false });
   }
-
-
 }
 module.exports = UserAuthentication;
