@@ -7,9 +7,9 @@ const UpdateUserPassword = async (req, res) => {
   try {
     await UpdatePassword(email, hashedPass);
   } catch (err) {
-    console.log(err); res.status(400).json({ message: "Couldn't Update Password" });
+    console.log(err); res.status(400).json({ message: "Couldn't Update Password", password: false });
   } finally {
-    res.status(200).json({ message: "Password Updated Successfully" })
+    res.status(200).json({ message: "Password Updated Successfully", password: true })
   }
 }
 
